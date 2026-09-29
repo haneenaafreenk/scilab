@@ -1,0 +1,17 @@
+clc;
+clear;
+x= [0 1 2 3 4 5 6 7 8 9 10];
+mu=[0 0.1 0.3 0.6 0.9 1.0 0.8 0.5 0.2 0.1 0];
+numerator = sum(x .* mu);
+denominator = sum(mu);
+crisp_value = numerator / denominator;
+disp("numerator = ");
+disp(numerator);
+disp("denominator =");
+disp(denominator);
+disp("defuzzified value using centroid method =");
+disp(crisp_value);
+plot(x, mu);
+xlabel("output");
+ylabel("membership");
+title("fuzzy output set");
